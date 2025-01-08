@@ -1,10 +1,10 @@
-import { version } from './package.json';
+import packageInfo from './package.json' with { type: "json" };
 export default ({ config }) => {
   return {
     ...config,
     name: 'TestExpo',
     slug: 'test-expo',
-    version: `${version.split('.')[0]}.0.0`,
+    version: `${packageInfo.version.split('.')[0]}.0.0`,
     orientation: 'portrait',
     icon: './assets/icon.png',
     splash: {
